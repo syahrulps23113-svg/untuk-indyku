@@ -1,0 +1,345 @@
+body{
+margin:0;
+font-family:'Quicksand',sans-serif;
+background:linear-gradient(to top,#14002b,#2b1055,#3c1361);
+color:white;
+overflow:hidden;
+}
+
+/* Background bintang */
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15), transparent 40%),
+radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1), transparent 45%),
+url("https://www.transparenttextures.com/patterns/stardust.png");
+animation:skyGlow 25s linear infinite;
+opacity:0.5;
+z-index:-1;
+}
+
+@keyframes skyGlow{
+0%{background-position:0 0, 0 0, 0 0;}
+50%{background-position:40px 20px, -30px 40px, 0 500px;}
+100%{background-position:0 0, 0 0, 0 1000px;}
+}
+
+.slide{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+animation:fade 1s ease;
+}
+
+.slide.active{
+display:flex;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(25px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+#slide3{
+overflow-y:auto;
+justify-content:flex-start;
+padding-top:20px;
+padding-bottom:60px;
+}
+
+.judul{
+font-family:'Pacifico',cursive;
+font-size:36px;
+min-height:50px;
+}
+
+.countdown{
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+letter-spacing:1px;
+text-shadow:0 0 10px rgba(255,255,255,0.4);
+}
+
+.tombol{
+margin-top:15px;
+padding:12px 26px;
+border:none;
+border-radius:30px;
+background:#caa6ff;
+color:white;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 0 20px #caa6ff;
+transition:0.3s;
+}
+
+.tombol:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px #e0c3ff;
+}
+
+.loveButton{
+font-size:45px;
+background:rgba(0,0,0,0.35);
+border:none;
+border-radius:14px;
+padding:16px 22px;
+color:white;
+cursor:pointer;
+animation:pulse 1.2s infinite;
+backdrop-filter:blur(6px);
+}
+
+.klikText{
+font-size:12px;
+margin-top:4px;
+letter-spacing:2px;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.15);}
+100%{transform:scale(1);}
+}
+
+.surat{
+position:absolute;
+top:-400px;
+width:330px;
+background:
+url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+#fffaf0;
+color:#333;
+padding:25px;
+border-radius:8px;
+box-shadow:
+0 15px 40px rgba(0,0,0,0.5),
+inset 0 0 40px rgba(0,0,0,0.08);
+transition:1.5s ease;
+}
+
+.surat.muncul{
+top:140px;
+}
+
+.album{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:10px;
+align-items:center;
+}
+
+/* FOTO DENGAN GLOW MENGIKUTI BENTUK + MELAYANG */
+.fotoItem img{
+width:150px;
+cursor:pointer;
+transition:0.3s;
+
+/* glow mengikuti bentuk transparan */
+filter: drop-shadow(0 0 12px rgba(255,255,255,0.6))
+        drop-shadow(0 0 25px rgba(255,150,255,0.4));
+
+/* efek melayang */
+animation: floating 4s ease-in-out infinite;
+}
+
+/* efek saat disentuh */
+.fotoItem img:hover{
+transform:translateY(-10px) scale(1.05);
+filter: drop-shadow(0 0 18px rgba(255,255,255,0.9))
+        drop-shadow(0 0 40px rgba(255,150,255,0.7));
+}
+
+/* glow pelan */
+.fotoItem{
+animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse{
+from{filter:brightness(1);}
+to{filter:brightness(1.15);}
+}
+
+/* animasi melayang */
+@keyframes floating{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+#loveContainer{
+position:absolute;
+bottom:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.love{
+position:absolute;
+bottom:-60px;
+font-size:22px;
+opacity:0.5;
+filter:blur(1px);
+animation:naikDreamy 6s linear forwards;
+}
+
+@keyframes naikDreamy{
+from{transform:translateY(0) scale(0.9); opacity:0.5;}
+to{transform:translateY(-900px) scale(1.3); opacity:0;}
+}
+
+/* SLIDE FOTO BESAR */
+.slideFoto{
+overflow-y:auto;
+justify-content:flex-start;
+padding-top:30px;
+padding-bottom:40px;
+}
+
+/* isi slide */
+.kontenFoto{
+max-width:420px;
+margin:auto;
+animation:munculDariBawah 1s ease;
+}
+
+/* animasi naik */
+@keyframes munculDariBawah{
+from{
+opacity:0;
+transform:translateY(80px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.fotoBesar{
+width:100%;
+margin-bottom:15px;
+
+/* glow mengikuti bentuk foto transparan */
+filter:
+drop-shadow(0 0 15px rgba(255,255,255,0.6))
+drop-shadow(0 0 30px rgba(255,150,255,0.4));
+
+/* animasi melayang pelan */
+animation: floatingFoto 5s ease-in-out infinite;
+}
+
+
+/* teks cerita */
+.cerita{
+font-size:16px;
+line-height:1.6;
+opacity:0.9;
+}
+
+.slideFoto{
+overflow-y:auto;
+justify-content:flex-start;
+padding-top:20px;
+padding-bottom:60px;
+}
+
+.kontenFoto{
+max-width:420px;
+margin:auto;
+animation:munculDariBawah 1s ease;
+}
+
+.fotoBesar{
+width:100%;
+border-radius:16px;
+margin-top:18px;
+box-shadow:0 0 25px rgba(255,255,255,0.25);
+}
+
+.cerita{
+font-size:15px;
+line-height:1.7;
+margin:12px 8px 10px 8px;
+opacity:0;
+animation:fadeText 1.5s ease forwards;
+}
+
+@keyframes fadeText{
+to{
+opacity:0.95;
+}
+}
+
+
+#lanjutAlbum{
+position:sticky;
+bottom:20px;
+margin-top:30px;
+}
+
+#gameArea{
+position:relative;
+width:100%;
+height:60vh;
+overflow:hidden;
+}
+
+.hatiJatuh{
+position:absolute;
+top:-60px;
+cursor:pointer;
+animation:jatuhHati 5s linear forwards;
+}
+
+.hatiJatuh img{
+width:60px;   /* ukuran sedang, sedikit lebih besar dari emoji */
+pointer-events:none;
+}
+
+
+@keyframes jatuhHati{
+from{transform:translateY(0);}
+to{transform:translateY(80vh);}
+}
+
+/* PESAN TENGAH */
+.pesanAkhir{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+text-align:center;
+
+background:rgba(0,0,0,0.65);
+padding:25px 30px;
+border-radius:18px;
+backdrop-filter:blur(8px);
+
+z-index:999;
+width:80%;
+max-width:320px;
+
+animation:munculPelan 1.2s ease forwards;
+}
+
+@keyframes munculPelan{
+from{
+opacity:0;
+transform:translate(-50%,-30%);
+}
+to{
+opacity:1;
+transform:translate(-50%,-50%);
+}
+}

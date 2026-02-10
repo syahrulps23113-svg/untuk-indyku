@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Untuk CINDERELLA PUTRI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<audio id="musik" loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<div id="stars"></div>
+
+<!-- SLIDE 1 -->
+<div class="slide active" id="slide1">
+  <h1 class="judul"><span id="typing"></span></h1>
+  <p id="hariJadian" class="countdown"></p>
+  <button class="tombol" onclick="mulaiMusik(); nextSlide(2)">Tombol Ajaib</button>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" id="slide2">
+
+  <div id="loveContainer"></div>
+
+  <button class="loveButton" onclick="tampilkanSurat()">
+    ❤
+    <div class="klikText">KLIK</div>
+  </button>
+
+  <div id="surat" class="surat">
+    <p>
+    hai sayang selamat hari valentine yaaaa, ini bukan hari dimana aku menemukanmu tapi ini adalah hari dimana dunia mengatakan keseluruh belahan hidupnya hari selamat, dan akupun sama, aku ingin mengatakannya padamu, ilove you so much sayang
+    </p>
+
+    <button class="tombol" onclick="nextSlide(3)">Lanjut</button>
+  </div>
+
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" id="slide3">
+
+<h2>Kenangan Kita</h2>
+
+<div class="album">
+
+<div class="fotoItem" onclick="bukaSlideFoto(4,1)">
+<img src="foto1.jpg">
+<p>MULA MULA KITAAA</p>
+</div>
+
+<div class="fotoItem" onclick="bukaSlideFoto(5,2)">
+<img src="foto2.jpg">
+<p>INI PAS DAH JADIIIII</p>
+</div>
+
+<div class="fotoItem" onclick="bukaSlideFoto(6,3)">
+<img src="foto3.jpg">
+<p>INIII JUGAAA YAAAAA</p>
+</div>
+
+</div>
+
+<button id="lanjutAlbum" class="tombol">Lanjut</button>
+
+</div>
+
+<!-- SLIDE 4 (3 FOTO + TEKS) -->
+<div class="slide slideFoto" id="slide4">
+
+<div class="kontenFoto">
+
+<img src="foto1a.jpg" class="fotoBesar">
+<p class="cerita">
+taugaaa ini fotoo apaaaaa, yapppp inituh foto pertama kamu kirim ke akuuu tauu. "IH SIAPANIH JIRRR" ucapku karena tiba tiba dikirimin pap pertama kali samaa kamuuu wokokowkwowko, rasanya gimana yahhhhh..... anehhh tapi kayaakknyyaaa aku senenggg bnget dehh heheh
+</p>
+
+<img src="foto1b.jpg" class="fotoBesar">
+<p class="cerita">
+kalauu ini udah masuk fase PDKT awwwww
+lucuuuu, gemmaassss bangettt plisss, malu malu kucing.
+aku kalau inget masa masa ini jadi keinget kasus nyandar di bahu wokokowkwowko.
+kemarin aku marah dan emosi karena decepuin namun sekarang rasanya aku bersyukur dehhh.
+karena kalau ga dicepuin mereka kita ga bakal rasain deg deg-annya hampir dipulangin hahahaa.
+fase ini juga lucuuu bgt pliss soalnyaa apa apa canggung, temen tapi bukan temen heheheh.
+</p>
+
+<img src="foto1c.jpg" class="fotoBesar">
+<p class="cerita">
+FOTOOO FAVORIT AKUNIHHHHH SUMPAHHH. kayakkk apasih ini lucuu bangtttt, ternyata ada yah orang yang mau bijuk aku kalau marah selain orang tuakuuu.
+dan aku sadar kalau kamu ituuu memangg selucuu ituuuu, makasih yaaaa udah mau ngebujuk waktu ituuu aku sangat senang sayanggg,
+lihat senyumnya... lihat matanya... lihat tingkahnya... ya meski waktu itu kamu marah balikk, tapi gapapaa salah aku jugaa hehe. maaf yaa sayangg,
+</p>
+
+<button class="tombol" onclick="nextSlide(3)">Kembali</button>
+
+</div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide slideFoto" id="slide5">
+
+<div class="kontenFoto">
+
+<img src="foto2a.jpg" class="fotoBesar">
+<p class="cerita">
+nah kalau ini udah masuk masa kita pacarannn guysss... sekedar bertemu dan berbicara ternyata senyaman itu dengan orang ini.
+banyak yang selalu pikirkan tiap saat agar bisa ketemu denganmu, segala kulakukan haya demi itu. tapi aku gak merasa sama sekali mrugi apalagi menyesall. ngga sama sekali.
+aku ingin jauh lebih banyak mengenalmu,
+ini foto diambil pas kita bukber barengg heheh. comellllll
+</p>
+
+<img src="foto2b.jpg" class="fotoBesar">
+<p class="cerita">
+kalauu ini tuh pap pap kitaaa (salam 2 jariii guysss)
+banyak hal yang udah kitaa lakuin selama 1 tahun lebih iniiii, dan aku masing ingin kita selalu bersama yah sayang, memori indahku
+</p>
+
+<img src="foto2c.jpg" class="fotoBesar">
+<p class="cerita">
+aku bersyukur banget bisa lewatin ini semua sama kamu, ngga harus sempurna sayanggg.... 
+yang penting kita saling adaa yaaa, dan terus berjalan sampai nanti kita dipisahkan oleh sang pencipta
+</p>
+
+<button class="tombol" onclick="nextSlide(3)">Kembali</button>
+
+</div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide slideFoto" id="slide6">
+
+<div class="kontenFoto">
+
+<img src="foto3a.jpg" class="fotoBesar">
+<p class="cerita">
+nahh terus dah sampai deh dimana aku dah berani dan terbiasa datang ke rumah kamu,
+aku banyak takutnya sayang.... tapi aku lawan buat kamuu, berattt.... tapi untung ada kamu yang selalu bantu akuuuu, selalu menjadi penguat akuuuu.
+ini foto kita pas aku dirumah kamuuuu, masih banyak lagi pokoknya.
+sayang nanti rumah kita bentuknya gimana ya? hehehheheh, intinya harus enak dihirup udaranya titik
+</p>
+
+<img src="foto3b.jpg" class="fotoBesar">
+<p class="cerita">
+Aku tidak tahu masa depan akan seperti apa,
+tapi aku selalu berharap
+kita bisa terus bersama,
+menjalani hari-hari dengan cara kita sendiri.
+nah kalau ini kita lagi dikebun tehhh, pas kamu ulangtahun nihhhhh, ada yang marah dimobill, lucu bangettt, marahnya sampe ninggalin aku,
+semakin kukejar semakin kau jauh.
+tapi ujung ujungnya damai ditempat gara gara kamu hauss wkwkwkwwkwkw
+</p>
+
+<img src="foto3c.jpg" class="fotoBesar">
+<p class="cerita">
+Terima kasih sudah menjadi bagian dari hidupku yaa sayang.
+Terima kasih sudah bertahan,
+dan terima kasih untuk semua kenangan
+yang akan selalu aku simpan dengan hangat.
+mari kita lukis dunia kita dengan lebih banyak warna yaaa, lebih jauh, lebih berani, jangan sampai kita tumbang yaaa sayanggggg
+</p>
+
+<button class="tombol" onclick="nextSlide(3)">Kembali</button>
+
+</div>
+</div>
+
+
+<!-- SLIDE 7 -->
+<div class="slide" id="slide7">
+
+<h2>Tangkap hatiku dulu yaa ❤️</h2>
+<p id="scoreGame">Hati terkumpul: 0</p>
+
+<div id="gameArea"></div>
+
+<!-- POPUP PESAN AKHIR -->
+<div id="pesanAkhir" class="pesanAkhir">
+  <h2>Aku akan selalu memilih kamu ❤️</h2>
+  <p>Terima kasih sudah bertahan dan selalu ada, maaf yah sayang kalau webnya kurang hehe, aku cuma bisa segini.</p>
+</div>
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
