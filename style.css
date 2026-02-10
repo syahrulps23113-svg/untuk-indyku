@@ -250,7 +250,7 @@ opacity:0.9;
 overflow-y:auto;
 justify-content:flex-start;
 padding-top:20px;
-padding-bottom:120px; /* tambah ruang bawah */
+padding-bottom:150px; /* tambah ruang bawah */
 }
 
 .slideFoto .tombol{
@@ -262,8 +262,10 @@ bottom:15px;
 .kontenFoto{
 max-width:420px;
 margin:auto;
+margin-bottom:80px; /* jarak dari tombol */
 animation:munculDariBawah 1s ease;
 }
+
 
 .fotoBesar{
 width:100%;
@@ -399,4 +401,10 @@ height:55vh;
 width:85%;
 font-size:14px;
 }
+}
+
+.slideFoto .tombol{
+position:sticky;
+bottom:20px;
+margin-top:20px;
 }
