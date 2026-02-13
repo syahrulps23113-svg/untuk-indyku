@@ -140,3 +140,7 @@ jatuhkanHati();
 jatuhkanHati();
 
 }
+
+function bukaKado(){
+document.getElementById("suratKado").classList.add("muncul");
+}

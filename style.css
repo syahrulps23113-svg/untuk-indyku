@@ -408,3 +408,54 @@ position:sticky;
 bottom:20px;
 margin-top:20px;
 }
+
+/* AREA KADO */
+.kadoArea{
+display:flex;
+justify-content:center;
+align-items:center;
+height:60vh;
+}
+
+/* KADO */
+.kadoBesar{
+width:180px;
+cursor:pointer;
+animation:getarHalus 1.6s ease-in-out infinite;
+filter:drop-shadow(0 0 25px rgba(255,150,255,0.6));
+}
+
+/* animasi getar halus */
+@keyframes getarHalus{
+0%{transform:translateY(0px) rotate(0deg);}
+25%{transform:translateY(-4px) rotate(-1deg);}
+50%{transform:translateY(0px) rotate(1deg);}
+75%{transform:translateY(-3px) rotate(-1deg);}
+100%{transform:translateY(0px) rotate(0deg);}
+}
+
+/* SURAT KADO */
+.suratKado{
+position:fixed;
+bottom:-300px;
+left:50%;
+transform:translateX(-50%);
+width:320px;
+
+background:
+url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+#fffaf0;
+
+color:#333;
+padding:20px;
+border-radius:10px;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+
+text-align:center;
+transition:1s ease;
+}
+
+/* muncul dari bawah */
+.suratKado.muncul{
+bottom:120px;
+}
